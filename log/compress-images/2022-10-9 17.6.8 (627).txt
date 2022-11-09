@@ -1,0 +1,7 @@
+File from: [assets/images/**/*]
+
+File to: [-]
+
+Compression algorithm: [-]
+
+Description:  Directory is empty!: 

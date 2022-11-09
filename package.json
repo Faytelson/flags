@@ -1,0 +1,30 @@
+{
+  "name": "flags",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Faytelson/flags.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Faytelson/flags/issues"
+  },
+  "homepage": "https://github.com/Faytelson/flags#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "compress-images": "^2.0.5",
+    "gifsicle": "^5.2.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "pngquant-bin": "^6.0.1",
+    "sass": "^1.56.1"
+  }
+}

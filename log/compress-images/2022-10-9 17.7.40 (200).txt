@@ -1,0 +1,7 @@
+File from: [images/**/*]
+
+File to: [-]
+
+Compression algorithm: [-]
+
+Description:  Directory is empty!: 
