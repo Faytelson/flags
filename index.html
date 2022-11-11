@@ -13,29 +13,53 @@
 <div class="detail-page__container">
     <div class="detail-page__section">
         <div class="product-info">
-            <div class="product-info__slider"></div>
-            <div class="product-info__image">
+            <div class="product-info__slider-container">
+                <div class="product-info__slider">
+                    <div class="product-info__slider-item">
+                        <img src="/src/assets/images/product-image.jpg" alt="" class="product-info__slider-img">
+                    </div>
+                    <div class="product-info__slider-item">
+                        <img src="/src/assets/images/product-image.jpg" alt="" class="product-info__slider-img">
+                    </div>
+                    <div class="product-info__slider-item">
+                        <img src="/src/assets/images/product-image.jpg" alt="" class="product-info__slider-img">
+                    </div>
+                    <div class="product-info__slider-item">
+                        <img src="/src/assets/images/product-image.jpg" alt="" class="product-info__slider-img">
+                    </div>
+                    <div class="product-info__slider-item">
+                        <img src="/src/assets/images/product-image.jpg" alt="" class="product-info__slider-img">
+                    </div>
+                    <div class="product-info__slider-item">
+                        <img src="/src/assets/images/product-image.jpg" alt="" class="product-info__slider-img">
+                    </div>
+                </div>
+
+            </div>
+            <div class="product-info__image-container">
                 <img src="src/assets/images/product-image.jpg" class="product-info__img" alt="">
             </div>
             <div class="product-info__details details">
-                <div class="detail-section-title details__detail-section-title">флагшток стационарный 6-12 метров из
-                    алюминия
-                </div>
-                <div class="details__price-info">
-                    <div class="detail-section-subtitle details__detail-section-subtitle">Цена аренды:</div>
-                    <div class="details__price">
-                        <div class="details__price-current">от 12 000 р. / день</div>
-                        <div class="details__price-old">15 000 р.</div>
+                <div class="details__top">
+                    <div class="detail-section-title details__detail-section-title">флагшток стационарный 6-12 метров из
+                        алюминия
                     </div>
-                </div>
-                <div class="details__info">
-                    <div class="detail-section-subtitle details__detail-section-subtitle">Характеристики:</div>
-                    <div class="details__info-item">Высота флагштока: 5,5 м</div>
-                    <div class="details__info-item">Длинна баннерного плеча: 1,3 м: 5,5 м</div>
-                    <div class="details__info-item">Вес конструкции без воды: 12,8 л</div>
-                    <div class="details__info-item">Вес основания с водой: 75 кг</div>
-                    <div class="details__info-item">Вес основания с водой: 75 кг</div>
-                    <div class="details__info-item">Вес основания с водой: 75 кг</div>
+                    <div class="details__price-info">
+                        <div class="detail-section-subtitle details__detail-section-subtitle">Цена аренды:</div>
+                        <div class="details__price">
+                            <div class="details__price-current">от 12 000 р. / день</div>
+                            <div class="details__price-old">15 000 р.</div>
+                        </div>
+                    </div>
+                    <div class="details__info">
+                        <div class="detail-section-subtitle details__detail-section-subtitle">Характеристики:</div>
+                        <div class="details__info-item">Высота флагштока: 5,5 м</div>
+                        <div class="details__info-item">Длинна баннерного плеча: 1,3 м: 5,5 м</div>
+                        <div class="details__info-item">Вес конструкции без воды: 12,8 л</div>
+                        <div class="details__info-item">Вес основания с водой: 75 кг</div>
+                        <div class="details__info-item">Вес основания с водой: 75 кг</div>
+                        <div class="details__info-item">Вес основания с водой: 75 кг</div>
+                    </div>
                 </div>
                 <button class="details__btn">
                     <span class="details__btn-img"></span>
@@ -48,7 +72,8 @@
     <div class="detail-page__section">
         <div class="calculator-section">
             <div class="calculator-section__calculator-column calculator-column">
-                <div class="calculator-column__detail-section-title detail-section-title detail-section-title_sm">Расчитайте
+                <div class="calculator-column__detail-section-title detail-section-title detail-section-title_sm">
+                    Расчитайте
                     стоимость флагштока,
                 </div>
                 <span class="calculator-column__subtitle">ответив на 3 вопросы за 1 минуту</span>
@@ -56,13 +81,34 @@
                     <div class="calculator__item">
                         <div class="calculator__item-title">1. Какой размер флагштока вам нужен?</div>
                         <div class="calculator__range">
-                            <div class="calculator__range-item"></div>
-                            <div class="calculator__range-item"></div>
-                            <div class="calculator__range-item"></div>
-                            <div class="calculator__range-item"></div>
-                            <div class="calculator__range-item"></div>
-                            <div class="calculator__range-item"></div>
-                            <div class="calculator__range-item"></div>
+                            <div class="calculator__range-item calculator__range-item_active">
+                                <div class="calculator__range-item-marker"></div>
+                                <div class="calculator__range-item-num">6</div>
+                            </div>
+                            <div class="calculator__range-item">
+                                <div class="calculator__range-item-marker"></div>
+                                <div class="calculator__range-item-num">7</div>
+                            </div>
+                            <div class="calculator__range-item">
+                                <div class="calculator__range-item-marker"></div>
+                                <div class="calculator__range-item-num">8</div>
+                            </div>
+                            <div class="calculator__range-item">
+                                <div class="calculator__range-item-marker"></div>
+                                <div class="calculator__range-item-num">9</div>
+                            </div>
+                            <div class="calculator__range-item">
+                                <div class="calculator__range-item-marker"></div>
+                                <div class="calculator__range-item-num">10</div>
+                            </div>
+                            <div class="calculator__range-item">
+                                <div class="calculator__range-item-marker"></div>
+                                <div class="calculator__range-item-num">11</div>
+                            </div>
+                            <div class="calculator__range-item">
+                                <div class="calculator__range-item-marker"></div>
+                                <div class="calculator__range-item-num">12</div>
+                            </div>
                         </div>
                     </div>
                     <div class="calculator__item">
@@ -70,8 +116,10 @@
                         <div class="calculator__radio-group">
                             <div class="calculator__radio calculator__radio_active">
                                 <label for="1" class="calculator__radio-label">
-                                    <input type="radio" class="calculator__radio-input" id="1" name="base" value="1" checked>
-                                    <img class="calculator__radio-img" src="/src/assets/images/icons/products-base-1.svg" alt="">
+                                    <input type="radio" class="calculator__radio-input" id="1" name="base" value="1"
+                                           checked>
+                                    <img class="calculator__radio-img"
+                                         src="/src/assets/images/icons/products-base-1.svg" alt="">
                                     <span class="calculator__radio-title">Перекрестие с плитами</span>
                                 </label>
                             </div>
@@ -79,7 +127,8 @@
                             <div class="calculator__radio">
                                 <label for="2" class="calculator__radio-label">
                                     <input type="radio" class="calculator__radio-input" id="2" name="base" value="2">
-                                    <img class="calculator__radio-img" src="/src/assets/images/icons/products-base-2.svg" alt="">
+                                    <img class="calculator__radio-img"
+                                         src="/src/assets/images/icons/products-base-2.svg" alt="">
                                     <span class="calculator__radio-title">Бетонное</span>
                                 </label>
                             </div>
@@ -90,8 +139,10 @@
                         <div class="calculator__radio-group">
                             <div class="calculator__radio calculator__radio_active">
                                 <label for="3" class="calculator__radio-label">
-                                    <input type="radio" class="calculator__radio-input" id="3" name="top" value="3" checked>
-                                    <img class="calculator__radio-img" src="/src/assets/images/icons/products-base-2.svg" alt="">
+                                    <input type="radio" class="calculator__radio-input" id="3" name="top" value="3"
+                                           checked>
+                                    <img class="calculator__radio-img"
+                                         src="/src/assets/images/icons/products-base-2.svg" alt="">
                                     <span class="calculator__radio-title">“Луковица” золото</span>
                                 </label>
                             </div>
@@ -99,7 +150,8 @@
                             <div class="calculator__radio">
                                 <label for="4" class="calculator__radio-label">
                                     <input type="radio" class="calculator__radio-input" id="4" name="top" value="4">
-                                    <img class="calculator__radio-img" src="/src/assets/images/icons/products-base-2.svg" alt="">
+                                    <img class="calculator__radio-img"
+                                         src="/src/assets/images/icons/products-base-2.svg" alt="">
                                     <span class="calculator__radio-title">“Луковица” серебро</span>
                                 </label>
                             </div>
@@ -107,7 +159,8 @@
                             <div class="calculator__radio">
                                 <label for="5" class="calculator__radio-label">
                                     <input type="radio" class="calculator__radio-input" id="5" name="top" value="5">
-                                    <img class="calculator__radio-img" src="/src/assets/images/icons/products-base-2.svg" alt="">
+                                    <img class="calculator__radio-img"
+                                         src="/src/assets/images/icons/products-base-2.svg" alt="">
                                     <span class="calculator__radio-title">Евро топ</span>
                                 </label>
                             </div>
@@ -119,31 +172,33 @@
                 <img src="/src/assets/images/icons/image-background.svg" alt="" class="calculator-section__img">
             </div>
             <div class="calculator-section__result-column result-column">
-                <div class="result-column__title">Ваш чек:</div>
-                <div class="result-column__products">
+                <div class="result-column__container">
+                    <div class="result-column__title">Ваш чек:</div>
                     <div class="result-column__items">
-                        <span class="result-column__item-name">1. Флагшток 6 м</span>
-                        <span class="result-column__item-price">+12000 р.</span>
+                        <div class="result-column__item">
+                            <span class="result-column__item-name">1. Флагшток 6 м</span>
+                            <span class="result-column__item-price">+12000 р.</span>
+                        </div>
+                        <div class="result-column__item">
+                            <span class="result-column__item-name">2. Перекрестие с плитами</span>
+                            <span class="result-column__item-price">+500 р.</span>
+                        </div>
+                        <div class="result-column__item">
+                            <span class="result-column__item-name">3. Луковица золото</span>
+                            <span class="result-column__item-price">+1000 р.</span>
+                        </div>
                     </div>
-                    <div class="result-column__items">
-                        <span class="result-column__item-name">2. Перекрестие с плитами</span>
-                        <span class="result-column__item-price">+500 р.</span>
+                    <div class="result-column__amount">
+                        <div class="result-column__amount-title">Количество:</div>
+                        <div class="result-column__amount-btns">
+                            <button class="result-column__amount-btn result-column__amount-btn_decr">-</button>
+                            <div class="result-column__amount-output">1</div>
+                            <button class="result-column__amount-btn result-column__amount-btn_active result-column__amount-btn_incr">+</button>
+                        </div>
                     </div>
-                    <div class="result-column__items">
-                        <span class="result-column__item-name">3. Луковица золото</span>
-                        <span class="result-column__item-price">+1000 р.</span>
-                    </div>
+                    <div class="result-column__price">Итого: 13 500 р.</div>
+                    <button class="result-column__btn" type="submit">Заказать</button>
                 </div>
-                <div class="result-column__amount">
-                    <div class="result-column__amount-title"></div>
-                    <div class="result-column__amount-btns">
-                        <button class="result-column__mount-btn">-</button>
-                        <div class="result-column__amount-output">1</div>
-                        <button class="result-column__mount-btn">+</button>
-                    </div>
-                </div>
-                <div class="result-column__price">Итого: 13 500 р.</div>
-                <div class="result-column__btn">Заказать</div>
             </div>
         </div>
     </div>
@@ -151,94 +206,105 @@
     <div class="detail-page__section">
         <div class="docs">
             <div class="detail-section-title docs__detail-section-title">Скачать</div>
-            <div class="docs__item">Паспорт изделия</div>
-            <div class="docs__item">Выкройка для флага</div>
-            <div class="docs__item">Инструкция по сборке</div>
-        </div>
-    </div>
-
-    <div class="detail-page__section">
-        <div class="description">
-            <div class="detail-section-title description__detail-section-title">Описание</div>
-            <div class="description__subtitle">Конструкция Флаговое поле в аренду</div>
-            <div class="description__text">
-                Конструкция состоит из основание в виде треугольника, прогруженное плитами, общий вес основания 200 кг.
-                и
-                4-х
-                мачт, высотой 5 метров. Без баннерного плеча.
+            <div class="docs__item">
+                <a href="#" class="docs__link">Паспорт изделия</a>
             </div>
-            <div class="description__text">
-                Конструкция прекрасно подходит для праздничного оформления площадок на 9 мая, День города, День России,
-                фестивалей, ярмарок и других уличных мероприятий. Для установки на площадях, входных группах и на любой
-                открытой
-                местности.
+            <div class="docs__item">
+                <a href="#" class="docs__link">Выкройка для флага</a>
             </div>
-            <div class="description__text">
-                Благодаря своей конструктивной особенности: большая площадь соприкосновения с поверхностью - Флаговое
-                поле
-                устойчиво стоит даже при сильных ветровых нагрузках со стандартным пригрузом. А при желании его можно
-                дополнительно усилить.
-            </div>
-            <div class="description__text">
-                В стоимость аренды входит 4 мачты, услуга доставки в пределах МКАД, установка и монтаж конструкции, а
-                так же
-                демонтаж и забор конструкции с места. Так же мы изготовим для вас флаги из легкой флажной ткани.
-            </div>
-            <div class="description__text">
-                При необходимости мы можем предоставить конструкцию в аренду без монтажа и доставки. В этом случае
-                необходимо
-                внести залоговую стоимость Флагового поля равной цене продажной стоимости конструктива.
-            </div>
-            <div class="description__text">
-                Конструкцию так же можно приобрести для собственных нужд и установки флагштоков и навешивания флагов.
-                Конструкция будет прекрасным дополнением входной группы, декорацией подъезда к местам продаж, АЗС,
-                обозначения
-                офисов продаж и других декоративных целей.
+            <div class="docs__item">
+                <a href="#" class="docs__link">Инструкция по сборке</a>
             </div>
         </div>
     </div>
 
-    <div class="detail-page__section">
-        <div class="service">
-            <div class="service__detail-section-title detail-section-title">Мы организуем для Вас:</div>
-            <div class="service__list">
-                <div class="service__list-item">
-                    <div class="service__item-img-container">
-                        <img src="/src/assets/images/icons/car.svg" alt="" class="service__item-img">
-                    </div>
-                    <div class="service__item-title">Доставку флагштоков и вывоз после аренды</div>
+    <div class="detail-page__container_sm">
+        <div class="detail-page__section">
+            <div class="description">
+                <div class="detail-section-title description__detail-section-title">Описание</div>
+                <div class="description__subtitle">Конструкция Флаговое поле в аренду</div>
+                <div class="description__text">
+                    Конструкция состоит из основание в виде треугольника, прогруженное плитами, общий вес основания 200 кг.
+                    и
+                    4-х
+                    мачт, высотой 5 метров. Без баннерного плеча.
                 </div>
-                <div class="service__list-item">
-                    <div class="service__item-img-container">
-                        <img src="/src/assets/images/icons/tool.svg" alt="" class="service__item-img">
-                    </div>
-                    <div class="service__item-title">Монтаж, установку и демонтаж флагштоков</div>
+                <div class="description__text">
+                    Конструкция прекрасно подходит для праздничного оформления площадок на 9 мая, День города, День России,
+                    фестивалей, ярмарок и других уличных мероприятий. Для установки на площадях, входных группах и на любой
+                    открытой
+                    местности.
                 </div>
-                <div class="service__list-item">
-                    <div class="service__item-img-container">
-                        <img src="/src/assets/images/icons/tool-wheel.svg" alt="" class="service__item-img">
-                    </div>
-                    <div class="service__item-title">Техническую поддержку в период аренды</div>
+                <div class="description__text">
+                    Благодаря своей конструктивной особенности: большая площадь соприкосновения с поверхностью - Флаговое
+                    поле
+                    устойчиво стоит даже при сильных ветровых нагрузках со стандартным пригрузом. А при желании его можно
+                    дополнительно усилить.
+                </div>
+                <div class="description__text">
+                    В стоимость аренды входит 4 мачты, услуга доставки в пределах МКАД, установка и монтаж конструкции, а
+                    так же
+                    демонтаж и забор конструкции с места. Так же мы изготовим для вас флаги из легкой флажной ткани.
+                </div>
+                <div class="description__text">
+                    При необходимости мы можем предоставить конструкцию в аренду без монтажа и доставки. В этом случае
+                    необходимо
+                    внести залоговую стоимость Флагового поля равной цене продажной стоимости конструктива.
+                </div>
+                <div class="description__text">
+                    Конструкцию так же можно приобрести для собственных нужд и установки флагштоков и навешивания флагов.
+                    Конструкция будет прекрасным дополнением входной группы, декорацией подъезда к местам продаж, АЗС,
+                    обозначения
+                    офисов продаж и других декоративных целей.
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="detail-page__section">
-        <div class="form-section">
-            <div class="detail-section-title detail-section-title_sm form-section__detail-section-title">Остались
-                вопросы?
+        <div class="detail-page__section">
+            <div class="service">
+                <div class="service__detail-section-title detail-section-title">Мы организуем для Вас:</div>
+                <div class="service__list">
+                    <div class="service__list-item">
+                        <div class="service__item-img-container">
+                            <img src="/src/assets/images/icons/car.svg" alt="" class="service__item-img">
+                        </div>
+                        <div class="service__item-title">Доставку флагштоков и вывоз после аренды</div>
+                    </div>
+                    <div class="service__list-item">
+                        <div class="service__item-img-container">
+                            <img src="/src/assets/images/icons/tool.svg" alt="" class="service__item-img">
+                        </div>
+                        <div class="service__item-title">Монтаж, установку и демонтаж флагштоков</div>
+                    </div>
+                    <div class="service__list-item">
+                        <div class="service__item-img-container">
+                            <img src="/src/assets/images/icons/tool-wheel.svg" alt="" class="service__item-img">
+                        </div>
+                        <div class="service__item-title">Техническую поддержку в период аренды</div>
+                    </div>
+                </div>
             </div>
-            <div class="form-section__subtitle">Мы вам перезвоним</div>
-            <form action="" class="form-section__form">
-                <input type="text" class="form-section__input">
-                <input type="text" class="form-section__input">
-                <button class="form-section__btn">Отправить</button>
-            </form>
+        </div>
+
+        <div class="detail-page__section">
+            <div class="form-section">
+                <div class="detail-section-title detail-section-title_sm form-section__detail-section-title">Остались
+                    вопросы?
+                </div>
+                <div class="form-section__subtitle">Мы вам перезвоним</div>
+                <form action="" class="form-section__form">
+                    <input type="text" class="form-section__input">
+                    <input type="text" class="form-section__input">
+                    <button class="form-section__btn">Отправить</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/src/assets/js/slick.min.js"></script>
 <script src="/src/assets/js/script.js"></script>
+<script src="/src/assets/js/slider.js"></script>
 </body>
 </html>

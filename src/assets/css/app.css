@@ -46,12 +46,16 @@ a:hover {
 }
 
 .detail-page__container {
-  max-width: 1520px;
   width: 100%;
+  max-width: 1520px;
   margin: 0 auto;
 }
+.detail-page__container_sm {
+  width: 100%;
+  max-width: 1035px;
+}
 .detail-page__section {
-  margin-bottom: 80px;
+  padding: 20px 0 20px 0;
 }
 
 .detail-section-title {
@@ -79,6 +83,46 @@ a:hover {
 .product-info {
   display: flex;
 }
+.product-info__slider-container {
+  margin-right: 20px;
+  min-width: 152px;
+  position: relative;
+}
+.product-info__slider-item {
+  max-width: 152px;
+  margin-bottom: 10px;
+}
+.product-info__slider-img {
+  width: 100%;
+  max-width: 100%;
+}
+.product-info__slider {
+  padding: 30px 0 20px 0;
+}
+.product-info__slider .slick-list {
+  overflow: hidden;
+}
+.product-info__slider .slick-arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0;
+  width: 24px;
+  height: 21px;
+  border: none;
+}
+.product-info__slider .slick-arrow.slick-prev {
+  top: 0;
+  background: url("/src/assets/images/icons/slider-arr-up-grey.svg") 0 0/contain no-repeat;
+}
+.product-info__slider .slick-arrow.slick-next {
+  bottom: 0;
+  background: url("/src/assets/images/icons/slider-arr-down-gold.svg") 0 0/contain no-repeat;
+}
+.product-info__image-container {
+  margin-right: 38px;
+  flex-grow: 1;
+}
 .product-info__img {
   display: block;
   -o-object-fit: contain;
@@ -87,8 +131,14 @@ a:hover {
   height: 100%;
 }
 
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .details__detail-section-title {
   margin-bottom: 20px;
+  max-width: 550px;
 }
 .details__price {
   margin-bottom: 20px;
@@ -109,6 +159,9 @@ a:hover {
   line-height: 175%;
   text-decoration-line: line-through;
   color: #828282;
+}
+.details__info {
+  margin-bottom: 20px;
 }
 .details__info-item {
   font-family: "Ubuntu Regular", sans-serif;
@@ -165,6 +218,7 @@ a:hover {
 .calculator-section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .calculator-column__subtitle {
@@ -175,7 +229,11 @@ a:hover {
   line-height: 210%;
   text-transform: lowercase;
   color: #000000;
+  display: block;
   margin-bottom: 40px;
+}
+.calculator-column__detail-section-title {
+  max-width: 557px;
 }
 
 .calculator__item {
@@ -195,6 +253,69 @@ a:hover {
   flex-direction: column;
   flex-wrap: nowrap;
 }
+.calculator__range {
+  border-bottom: 2px solid #D9D9D9;
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 432px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.calculator__range-item {
+  width: 14px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+  display: flex;
+  align-items: flex-end;
+}
+.calculator__range-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #D9D9D9;
+}
+.calculator__range-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #D9D9D9;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 2;
+  transform: translate(-6px, 7px);
+}
+.calculator__range-item_active .calculator__range-item-marker, .calculator__range-item_active::before {
+  background: #FF9501;
+}
+.calculator__range-item_active::before, .calculator__range-item_active::after {
+  border: 2px solid #FF9501;
+}
+.calculator__range-item-num {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #000000;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: -7px;
+}
+.calculator__range-item-marker {
+  width: 2px;
+  height: 100%;
+  background: #D9D9D9;
+}
 .calculator__radio {
   width: 100%;
   max-width: 460px;
@@ -203,7 +324,7 @@ a:hover {
   margin-bottom: 10px;
   padding: 16px 27px;
   border: 2px solid #F2F2F2;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease-in-out;
 }
 .calculator__radio_active {
   border: 2px solid #FF9501;
@@ -214,6 +335,7 @@ a:hover {
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 .calculator__radio-input {
   position: absolute;
@@ -227,17 +349,127 @@ a:hover {
   margin-right: 20px;
 }
 
-.docs__item {
-  padding-left: 30px;
-  position: relative;
-  margin-bottom: 10px;
+.result-column__container {
+  background: #FFFFFF;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  padding: 36px 30px 30px 30px;
+  min-width: 371px;
+}
+.result-column__title {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 107%;
+  color: #000000;
+  margin-bottom: 26px;
+}
+.result-column__items {
+  margin-bottom: 24px;
+  padding-right: 30px;
+}
+.result-column__item {
   font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 175%;
+  line-height: 188%;
+  color: #828282;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.result-column__item-name {
+  max-width: 190px;
+}
+.result-column__item-price {
+  font-weight: 700;
+}
+.result-column__amount {
+  margin-bottom: 40px;
+}
+.result-column__amount-title {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 188%;
   color: #000000;
-  text-decoration: underline;
+  margin-bottom: 10px;
+}
+.result-column__amount-btns {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 188%;
+  color: #000000;
+  display: flex;
+}
+.result-column__amount-btn, .result-column__amount-output {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #F2F2F2;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.result-column__amount-btn:not(:last-child), .result-column__amount-output:not(:last-child) {
+  margin-right: 10px;
+}
+.result-column__amount-btn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.result-column__amount-btn:focus, .result-column__amount-btn:focus-visible {
+  outline: none;
+}
+.result-column__amount-btn_active {
+  border: 2px solid #FF9501;
+}
+.result-column__price {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 131%;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.result-column__btn {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 188%;
+  color: #FFFFFF;
+  background: #FF9501;
+  border: 2px solid #FF9501;
+  border-radius: 10px;
+  padding: 17px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: 100%;
+  max-width: 311px;
+  min-width: 300px;
+}
+.result-column__btn:hover {
+  background: #FFA72C;
+}
+
+.docs__item {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 10px;
 }
 .docs__item::before {
   display: block;
@@ -248,6 +480,19 @@ a:hover {
   width: 24px;
   height: 24px;
   background: url("/src/assets/images/icons/file-doc.svg") 0 0/contain no-repeat;
+}
+.docs__link {
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  color: #000000;
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
+.docs__link:hover {
+  color: #FF9501;
 }
 
 .description__subtitle {
@@ -346,4 +591,127 @@ a:hover {
   font-size: 16px;
   line-height: 188%;
   color: #FFFFFF;
+}
+
+@media screen and (max-width: 1550px) {
+  .detail-page__container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .calculator-section {
+    flex-wrap: nowrap;
+  }
+  .calculator-section__calculator-column {
+    margin-right: 40px;
+  }
+  .calculator-section__image-column {
+    flex-shrink: 1;
+    margin-right: 20px;
+  }
+  .calculator-section__img {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .form-section__form {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-section__input {
+    margin-bottom: 20px;
+    min-width: 250px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1340px) {
+  .details__detail-section-title {
+    max-width: 350px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .product-info {
+    flex-wrap: wrap;
+  }
+  .product-info__details {
+    margin-top: 24px;
+  }
+  .details__detail-section-title {
+    max-width: 80%;
+  }
+  .calculator-section__image-column {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  .product-info {
+    flex-direction: column;
+  }
+  .product-info__slider-container {
+    max-width: 100%;
+    margin-right: 0;
+  }
+  .product-info__slider .slick-list {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .product-info__slider .slick-track {
+    display: flex;
+  }
+  .product-info__slider .slick-dots {
+    display: flex;
+    justify-content: center;
+  }
+  .product-info__slider .slick-dots li:not(:last-child) {
+    margin-right: 8px;
+  }
+  .product-info__slider .slick-dots .slick-active button {
+    background: #FF9501;
+  }
+  .product-info__slider .slick-dots button {
+    width: 12px;
+    height: 2px;
+    background: #D9D9D9;
+    border: none;
+    border-radius: 10px;
+    font-size: 0;
+  }
+  .product-info__slider-item {
+    margin-bottom: 0;
+    margin-right: 10px;
+    max-width: 100%;
+  }
+  .calculator-section {
+    flex-wrap: wrap;
+  }
+  .calculator-section__calculator-column {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 599px) {
+  .product-info__image-container {
+    display: none;
+  }
+  .service__list {
+    flex-wrap: wrap;
+  }
+  .service__list-item {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .detail-page__container {
+    padding: 0 10px;
+  }
+  .result-column {
+    width: 100%;
+  }
+  .result-column__container {
+    padding: 22px 16px 16px 16px;
+    min-width: 300px;
+  }
+  .result-column__btn {
+    min-width: 250px;
+  }
 }

@@ -5,7 +5,7 @@ const gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
     imagecomp = require('compress-images'),
-    pathCSS = 'src/assets/scss/**/*.scss',
+    // pathCSS = 'src/assets/scss/main.scss',
     pathJS = 'src/assets/js/**/*.js';
 
 function browsersync() {
@@ -29,7 +29,7 @@ function scripts() {
 }
 
 function styles() {
-    return src(pathCSS)
+    return src('src/assets/scss/main.scss')
     .pipe(sass())
     .pipe(concat('app.css'))
     .pipe(autoprefixer())
@@ -55,7 +55,7 @@ async function images() {
 }
 
 function watcher() {
-    watch(pathCSS, styles);
+    watch('src/assets/scss/**/*.scss', styles);
     watch([pathJS, '!./js/**/app.js'], scripts);
     watch('**/*.html').on('change', browserSync.reload);
     watch('assets/images/**/*', images);

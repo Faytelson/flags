@@ -1,3 +1,4 @@
+
 //styles reset
 *,
 *::before,
@@ -24,13 +25,18 @@ a {
 
 .detail-page {
   &__container {
-    max-width: 1520px;
     width: 100%;
+    max-width: 1520px;
     margin: 0 auto;
   }
 
+  &__container_sm {
+    width: 100%;
+    max-width: 1035px;
+  }
+
   &__section {
-    margin-bottom: 80px;
+    padding: 20px 0 20px 0;
   }
 }
 
@@ -57,10 +63,59 @@ a {
   color: #828282;
 }
 
-// product-info
+// PRODUCT-INFO
 
 .product-info {
   display: flex;
+
+  //product-info slider
+  &__slider-container {
+    margin-right: 20px;
+    min-width: 152px;
+    position: relative;
+  }
+
+  &__slider-item {
+    max-width: 152px;
+    margin-bottom: 10px;
+  }
+
+  &__slider-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__slider {
+    padding: 30px 0 20px 0;
+    .slick-list {
+      overflow: hidden;
+    }
+
+    .slick-arrow {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0;
+      width: 24px;
+      height: 21px;
+      border: none;
+    }
+
+    .slick-arrow.slick-prev {
+      top: 0;
+      background: url('/src/assets/images/icons/slider-arr-up-grey.svg') 0 0/contain no-repeat;
+    }
+
+    .slick-arrow.slick-next {
+      bottom: 0;
+      background: url('/src/assets/images/icons/slider-arr-down-gold.svg') 0 0/contain no-repeat;
+    }
+  }
+
+  &__image-container {
+    margin-right: 38px;
+    flex-grow: 1;
+  }
 
   &__img {
     display: block;
@@ -70,9 +125,15 @@ a {
   }
 }
 
+//product-info details
 .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   &__detail-section-title {
     margin-bottom: 20px;
+    max-width: 550px;
   }
 
   &__price {
@@ -96,6 +157,10 @@ a {
     line-height: 175%;
     text-decoration-line: line-through;
     color: #828282;
+  }
+
+  &__info {
+    margin-bottom: 20px;
   }
 
   &__info-item {
@@ -158,9 +223,12 @@ a {
   }
 }
 
+//CALCULATOR
+
 .calculator-section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .calculator-column {
@@ -172,7 +240,12 @@ a {
     line-height: 210%;
     text-transform: lowercase;
     color: #000000;
+    display: block;
     margin-bottom: 40px;
+  }
+
+  &__detail-section-title {
+    max-width: 557px;
   }
 }
 
@@ -190,11 +263,88 @@ a {
     color: #000000;
     margin-bottom: 10px;
   }
+
   &__radio-group {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
   }
+
+  &__range {
+    border-bottom: 2px solid #D9D9D9;
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 432px;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__range-item {
+    width: 14px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+    transition: all .1s ease-in-out;
+    display: flex;
+    align-items: flex-end;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      border: 2px solid #D9D9D9;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      border: 2px solid #D9D9D9;
+      background: #fff;
+      border-radius: 50%;
+      z-index: 2;
+      transform: translate(-6px, 7px);
+    }
+
+    &_active {
+      .calculator__range-item-marker,
+      &::before, {
+        background: #FF9501;
+      }
+
+      &::before,
+      &::after {
+        border: 2px solid #FF9501;
+      }
+    }
+  }
+
+  &__range-item-num {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #000000;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: -7px;
+  }
+
+  &__range-item-marker {
+    width: 2px;
+    height: 100%;
+    background: #D9D9D9;
+  }
+
 
   &__radio {
     width: 100%;
@@ -204,7 +354,7 @@ a {
     margin-bottom: 10px;
     padding: 16px 27px;
     border: 2px solid #F2F2F2;
-    transition: all .2s ease;
+    transition: all .2s ease-in-out;
 
     &_active {
       border: 2px solid #FF9501;
@@ -217,6 +367,7 @@ a {
     justify-content: flex-start;
     align-items: center;
     position: relative;
+    cursor: pointer;
   }
 
   &__radio-input {
@@ -233,20 +384,151 @@ a {
   }
 }
 
-//docs
+// calculator result-column
+.result-column {
+
+  &__container {
+    background: #FFFFFF;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 36px 30px 30px 30px;
+    min-width: 371px;
+  }
+
+  &__title {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 107%;
+    color: #000000;
+    margin-bottom: 26px;
+  }
+
+  &__items {
+    margin-bottom: 24px;
+    padding-right: 30px;
+  }
+
+  &__item {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 188%;
+    color: #828282;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  &__item-name {
+    max-width: 190px;
+  }
+
+  &__item-price {
+    font-weight: 700;
+  }
+
+  &__amount {
+    margin-bottom: 40px;
+  }
+
+  &__amount-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 188%;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+
+  &__amount-btns {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 188%;
+    color: #000000;
+    display: flex;
+  }
+
+  &__amount-btn,
+  &__amount-output {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #F2F2F2;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__amount-btn {
+    appearance: none;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &_active {
+      border: 2px solid #FF9501;
+    }
+  }
+
+  &__price {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 131%;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 188%;
+    color: #FFFFFF;
+    background: #FF9501;
+    border: 2px solid #FF9501;
+    border-radius: 10px;
+    padding: 17px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    display: block;
+    width: 100%;
+    max-width: 311px;
+    min-width: 300px;
+
+    &:hover {
+      background: #FFA72C;
+    }
+  }
+
+}
+
+//DOCS
 
 .docs {
   &__item {
     padding-left: 30px;
     position: relative;
     margin-bottom: 10px;
-    font-family: 'Ubuntu', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 175%;
-    color: #000000;
-    text-decoration: underline;
 
     &::before {
       display: block;
@@ -259,9 +541,23 @@ a {
       background: url("/src/assets/images/icons/file-doc.svg") 0 0 / contain no-repeat;
     }
   }
+
+  &__link {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: #000000;
+    text-decoration: underline;
+    transition: all .2s ease-in-out;
+    &:hover {
+      color: #FF9501;
+    }
+  }
 }
 
-//description
+//DESCRIPTION
 
 .description {
 
@@ -286,7 +582,7 @@ a {
   }
 }
 
-//service
+//SERVICE
 
 .service {
   width: 100%;
@@ -330,7 +626,7 @@ a {
   }
 }
 
-//form
+//FORM
 
 .form-section {
   background: #F2F2F2;
