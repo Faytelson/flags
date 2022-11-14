@@ -5,7 +5,6 @@ const gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
     imagecomp = require('compress-images'),
-    // pathCSS = 'src/assets/scss/main.scss',
     pathJS = 'src/assets/js/**/*.js';
 
 function browsersync() {
@@ -21,10 +20,10 @@ function browsersync() {
 function scripts() {
     return src([
         pathJS,
-        '!.js/**/app.js'
+        '!src/assets/js/**/app.js'
     ])
     .pipe(concat('app.js'))
-    .pipe(dest('js/'))
+    .pipe(dest('src/assets/js/'))
     .pipe(browserSync.stream())
 }
 
@@ -39,8 +38,8 @@ function styles() {
 
 async function images() {
 	imagecomp(
-		"/images/**/*",
-		"/images/dest/",
+        "src/assets/images/**/*",
+		"src/assets/dest/",
 		{ compress_force: false, statistic: true, autoupdate: true }, false, 
 		{ jpg: { engine: "mozjpeg", command: ["-quality", "75"] } }, 
 		{ png: { engine: "pngquant", command: ["--quality=75-100", "-o"] } },
@@ -56,17 +55,17 @@ async function images() {
 
 function watcher() {
     watch('src/assets/scss/**/*.scss', styles);
-    watch([pathJS, '!./js/**/app.js'], scripts);
+    watch([pathJS, '!src/assets/js/**/app.js'], scripts);
     watch('**/*.html').on('change', browserSync.reload);
-    watch('assets/images/**/*', images);
+    watch('src/assets/images/**/*', images);
 }
 
 function buildcopy() {
     return src([
-        'js/app.js',
-        'css/app.css',
-        'fonts/**/*',
-        'images/dest/**/*',
+        'src/assets/js/**.js',
+        'src/assets/css/app.css',
+        'src/assets/fonts/**/*',
+        'src/assets/dest/**/*',
         '**/*.html'
     ], {
         base: './'

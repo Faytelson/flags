@@ -99,16 +99,17 @@ a {
       width: 24px;
       height: 21px;
       border: none;
+      cursor: pointer;
     }
 
     .slick-arrow.slick-prev {
       top: 0;
-      background: url('/src/assets/images/icons/slider-arr-up-grey.svg') 0 0/contain no-repeat;
+      background: url("../../assets/dest/icons/slider-arr-up-grey.svg") 0 0/contain no-repeat;
     }
 
     .slick-arrow.slick-next {
       bottom: 0;
-      background: url('/src/assets/images/icons/slider-arr-down-gold.svg') 0 0/contain no-repeat;
+      background: url('../../assets/dest/icons/slider-arr-down-gold.svg') 0 0/contain no-repeat;
     }
   }
 
@@ -202,7 +203,7 @@ a {
 
     &:hover .details__btn-img {
       color: #fff;
-      background: url(/src/assets/images/icons/calculator-white.svg), 0 0/ contain no-repeat;
+      background: url("../../assets/dest/icons/calculator-white.svg"), 0 0/ contain no-repeat;
     }
   }
 
@@ -210,7 +211,7 @@ a {
     width: 34px;
     height: 34px;
     margin-right: 12px;
-    background: url(/src/assets/images/icons/calculator.svg), 0 0/ contain no-repeat;
+    background: url("../../assets/dest/icons/calculator.svg"), 0 0/ contain no-repeat;
   }
 
   &__btn-text {
@@ -268,6 +269,15 @@ a {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+  }
+
+  &__radio-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 188%;
+    color: #000000;
   }
 
   &__range {
@@ -423,7 +433,8 @@ a {
   }
 
   &__item-name {
-    max-width: 190px;
+    max-width: 200px;
+    flex-grow: 1;
   }
 
   &__item-price {
@@ -538,7 +549,7 @@ a {
       left: 0;
       width: 24px;
       height: 24px;
-      background: url("/src/assets/images/icons/file-doc.svg") 0 0 / contain no-repeat;
+      background: url("../../assets/dest/icons/file-doc.svg") 0 0 / contain no-repeat;
     }
   }
 
@@ -654,6 +665,15 @@ a {
     padding: 12px 20px;
     border: none;
     margin-right: 21px;
+
+    &::placeholder {
+      font-family: 'Ubuntu', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 188%;
+      color: #BDBDBD;
+    }
   }
 
   &__btn {
